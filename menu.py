@@ -1,7 +1,15 @@
 import os
-
+import getpass
 os.system("tput setaf 79")
 print ("\t\t\thello thise is my container\t\t\t")
+
+passwd = getpass.getpass("enter the passward  :")
+apass = "redhat"
+
+if passwd != apass:
+    os.system("tput setaf 1")
+    print("---authenticator incorrect---")
+    exit()               
 
 print("where wuld you like to perform (local/remote) :",end='')
 location=input()
@@ -11,6 +19,7 @@ if location == "remote":
     remoteIP = input("enter our IP :")
 while True:
   if location == "local":
+   os.system("tput setaf  56")
    print("""  press 1: to see date
     press 2: to see cal
     press 3: to create a user
@@ -23,7 +32,7 @@ while True:
    print("enter the option ::",end='')
    ch = input()
    print(ch)
-
+    
    if int(ch) == 1:
       os.system("date")
    elif int(ch) == 2:
@@ -48,8 +57,9 @@ while True:
         print("---option not avilable---")
    input("enter to continue---")
    os.system("clear")
-
+    
   elif location == "remote":
+   os.system("tput setaf 8")
    print("""  press 1: to see date
     press 2: to see cal
     press 3: to create a user
@@ -58,7 +68,8 @@ while True:
     press 6: to create file
     press 7: exit
     """)
-
+   
+   os.system("tput setaf 76")
    print("enter the option ::",end='')
    ch = input()
    print(ch)
@@ -88,4 +99,6 @@ while True:
    input("enter to continue---")
    os.system("clear")
   else:
+      os.system("tput setaf 1")
       print("----location not avilable----")
+      exit()
