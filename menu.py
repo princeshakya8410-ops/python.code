@@ -52,6 +52,7 @@ while True:
         root = input()
         os.system("touch  {}".format(root))
    elif int(ch) == 7:
+        print ("===thank you for chosing us===")
         exit()
    else:
         print("---option not avilable---")
@@ -93,6 +94,7 @@ while True:
         root = input()
         os.system("ssh {0}touch  {1}".format(remoteIP,root))
    elif int(ch) == 7:
+        print ("===thank you for chosing us===")
         exit()
    else:
         print("---option not avilable---")
