@@ -65,6 +65,7 @@ while True:
         print("--- Available Disks and Partitions ---")
         os.system("fdisk -l | grep -E '^Disk /dev/'")
    elif int(ch) == 7:
+        print ("===thank you for chosing us===")
         exit()
    else:
         print("---option not avilable---")
@@ -115,6 +116,7 @@ while True:
    elif int(ch) == 6:
         os.system("")
    elif int(ch) == 7:
+        print ("===thank you for chosing us===")
         exit()
    else:
         print("---option not avilable---")
